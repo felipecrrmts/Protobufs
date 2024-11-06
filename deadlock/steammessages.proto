@@ -1,5 +1,11 @@
+syntax = "proto2";
+
+package deadlock;
+
+option go_package = "github.com/dragoncook/buf/deadlock";
+
 import "google/protobuf/descriptor.proto";
-import "/deadlock/steammessages_base.proto";
+import "deadlock/steammessages_base.proto";
 
 extend .google.protobuf.FieldOptions {
 	optional bool key_field = 60000 [default = false];
